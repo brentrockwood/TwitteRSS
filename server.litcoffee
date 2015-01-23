@@ -16,7 +16,7 @@ We are using [Jade](http://jade-lang.com) to render the RSS.
 
     app.set 'view engine', 'jade'
 
-If you've set the production variable, you get different logs.
+Log requests.
 
     logger = require 'connect-logger'
     app.use logger()
