@@ -5,8 +5,6 @@ We are using the [Express](http://expressjs.com) web framework for our server.
     express = require 'express'
     app = express()
 
-    util = require 'util'
-
 Desmond Morris's [twitter](https://www.npmjs.com/package/twitter) library is the shizzle for talking to the Twitter API.  Don't forget to set your Twitter consumer key environment variables!
 
     twitter = require 'twitter'

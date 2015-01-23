@@ -16,6 +16,11 @@ A server which retrieves [Twitter](https://twitter.com/) feeds and returns them 
 
     git clone https://github.com/brentrockwood/TwitteRSS
     npm install
+
+Then set up a [Twitter App](https://apps.twitter.com) and set the environment variables `TWITTER_CONSUMER_KEY` and `TWITTER_CONSUMER_SECRET`.
+
+Finally...
+
     npm start
 
 ## Deployment
