@@ -1,0 +1,31 @@
+{
+  "name": "tweet2rss",
+  "version": "1.0.0",
+  "description": "Turns tweets into RSS.",
+  "homepage": "https://github.com/brentrockwood/TwitteRSS",
+  "bugs": {
+    "url": "https://github.com/brentrockwood/TwitteRSS/issues",
+    "email": "brent@brentrockwood.com"
+  },
+  "author": {
+    "name": "Brent Rockwood",
+    "email": "brent@brentrockwood.com",
+    "url": "https://brentrockwood.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TwitteRSS/brentrockwood-dotcom/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "coffee-script": "^1.8.0",
+    "express": "^4.11.1",
+    "jade": "^1.9.1",
+    "twitter": "^1.0.3"
+  },
+  "private": "true",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "2.2.x"
+  }
+}

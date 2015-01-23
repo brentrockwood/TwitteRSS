@@ -1,0 +1,9 @@
+doctype xml
+rss(version='2.0')
+  channel
+    title Tweet2RSS
+    description Twitter in the RSS format
+    each status in statuses
+      item
+        link= 'https://twitter.com/' + status.user.screen_name + '/status/' + status.id_str
+        description= status.text
