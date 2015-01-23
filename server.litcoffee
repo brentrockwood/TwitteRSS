@@ -8,7 +8,6 @@ We are using the [Express](http://expressjs.com) web framework for our server.
 Desmond Morris's [twitter](https://www.npmjs.com/package/twitter) library is the shizzle for talking to the Twitter API.  Don't forget to set your Twitter consumer key environment variables!
 
     twitter = require 'twitter'
-
     twitter = new twitter
       consumer_key: process.env.TWITTER_CONSUMER_KEY
       consumer_secret: process.env.TWITTER_CONSUMER_SECRET
@@ -16,6 +15,11 @@ Desmond Morris's [twitter](https://www.npmjs.com/package/twitter) library is the
 We are using [Jade](http://jade-lang.com) to render the RSS.
 
     app.set 'view engine', 'jade'
+
+If you've set the production variable, you get different logs.
+
+    logger = require 'connect-logger'
+    app.use logger()
 
 ## Routes
 
