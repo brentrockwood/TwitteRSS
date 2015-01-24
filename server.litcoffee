@@ -33,7 +33,11 @@ The first route gets the most recent tweets for a particular user.
         if err
           return res.send 500, err
 
-        res.render 'rss', { statuses: body }
+        body =
+          statuses: body
+          link: 'https://twitter.com/' + req.params.user
+
+        res.render 'rss', body
 
 The second route gets the most recent tweets based on a search term.
 
@@ -44,6 +48,8 @@ The second route gets the most recent tweets based on a search term.
       twitter.get '/search/tweets', opts, (err, body) ->
         if err
           return res.send 500, err
+
+        body.link = 'https://twitter.com/search/?q=' + req.params.term
 
         res.render 'rss', body
 
