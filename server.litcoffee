@@ -21,6 +21,11 @@ Log requests.
     logger = require 'connect-logger'
     app.use logger()
 
+Enable compression.
+
+    compression = require 'compression'
+    app.use compression()
+
 ## Routes
 
 The first route gets the most recent tweets for a particular user.
