@@ -36,6 +36,7 @@ The first route gets the most recent tweets for a particular user.
         body =
           statuses: body
           link: 'https://twitter.com/' + req.params.user
+          selfUrl: req.protocol + '://' + req.headers.host + req.originalUrl
 
         res.header 'Content-Type', 'application/rss+xml'
         res.render 'rss', body
@@ -51,6 +52,7 @@ The second route gets the most recent tweets based on a search term.
           return res.send 500, err
 
         body.link = 'https://twitter.com/search/?q=' + req.params.term
+        body.selfUrl = req.protocol + '://' + req.headers.host + req.originalUrl
 
         res.header 'Content-Type', 'application/rss+xml'
         res.render 'rss', body
