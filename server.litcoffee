@@ -37,6 +37,7 @@ The first route gets the most recent tweets for a particular user.
           statuses: body
           link: 'https://twitter.com/' + req.params.user
 
+        res.header 'Content-Type', 'application/rss+xml'
         res.render 'rss', body
 
 The second route gets the most recent tweets based on a search term.
@@ -51,6 +52,7 @@ The second route gets the most recent tweets based on a search term.
 
         body.link = 'https://twitter.com/search/?q=' + req.params.term
 
+        res.header 'Content-Type', 'application/rss+xml'
         res.render 'rss', body
 
 ## Startup
